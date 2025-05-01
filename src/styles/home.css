@@ -1,0 +1,51 @@
+/* Home.css */
+
+body {
+  background-color: #FEF9E1;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #6D2323;
+  color: #FFD5AF;
+}
+
+/* Main Title */
+.main-title {
+  color: #6D2323;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Product Card */
+.product-card {
+  max-width: 345px;
+  margin: auto;
+  background-color: #ffffff;
+  border: 1px solid #E59A59;
+  box-shadow: 0 4px 8px rgba(112, 46, 30, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+/* Price text */
+.price {
+  color: #712E1E;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Button */
+.buy-button {
+  background-color: #E59A59;
+  color: white;
+}
+
+.buy-button:hover {
+  background-color: #d07e42;
+}
