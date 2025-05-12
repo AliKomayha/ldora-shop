@@ -1,6 +1,7 @@
 import { AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemText } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/home.css";
 
 function Navbar({ screenSize }) {
@@ -14,10 +15,10 @@ function Navbar({ screenSize }) {
             <Typography variant="h6" sx={{ flexGrow: 1, color: '#E5D0AC' }}>
                 Skincare Shop
             </Typography>
-            <Typography variant="button" sx={{ marginRight: 2, color: '#E5D0AC' }}>
+            <Typography component={Link} to="/" variant="button" sx={{ marginRight: 2, color: '#E5D0AC' }}>
                 Home
             </Typography>
-            <Typography variant="button" sx={{ marginRight: 2, color: '#E5D0AC' }}>
+            <Typography component={Link} to="/products" variant="button" sx={{ marginRight: 2, color: '#E5D0AC' }}>
                 Products
             </Typography>
             <Typography variant="button" sx={{ color: '#E5D0AC' }}>
@@ -42,8 +43,8 @@ function Navbar({ screenSize }) {
           </AppBar>
           <Drawer anchor="left" open={menuOpen} onClose={() => setMenuOpen(false)}>
             <List sx={{ width: 250 }}>
-              <ListItem button><ListItemText primary="Home" /></ListItem>
-              <ListItem button><ListItemText primary="Products" /></ListItem>
+              <ListItem button component={Link} to="/" ><ListItemText primary="Home" /></ListItem>
+              <ListItem button component={Link} to="/products" ><ListItemText primary="Products" /></ListItem>
               <ListItem button><ListItemText primary="Contact" /></ListItem>
             </List>
           </Drawer>
